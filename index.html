@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All the best! 🐾</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b1055;--pink:#ff4fa3;--sun:#ffd84a;--mint:#6ff2c5;--sky:#5ab8ff}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{
+  font-family:"Nunito",system-ui,sans-serif;color:var(--ink);text-align:center;
+  background:linear-gradient(120deg,#ffd84a,#ff9ecb,#8fe3ff,#b9ffa8,#ffd84a);
+  background-size:400% 400%;animation:bg 14s ease infinite;
+  min-height:100%;overflow-x:hidden;cursor:pointer;
+  padding:max(24px,env(safe-area-inset-top)) 20px max(24px,env(safe-area-inset-bottom));
+}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+
+main{position:relative;z-index:2;max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:38px;min-height:100vh;justify-content:center;padding:32px 0}
+
+h1{font-family:"Bagel Fat One","Arial Black",sans-serif;font-weight:400;font-size:clamp(2.6rem,10vw,5.6rem);line-height:.98;color:#fff;
+  -webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-shadow:5px 5px 0 var(--ink)}
+h1 span{display:inline-block;animation:hop 1.6s ease-in-out infinite}
+@keyframes hop{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+
+.sub{font-weight:900;font-size:clamp(1.05rem,3.6vw,1.5rem);background:#fff;border:3px solid var(--ink);border-radius:999px;padding:8px 20px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-1.5deg)}
+
+.stage{display:flex;gap:4px 10px;align-items:flex-end;justify-content:center;flex-wrap:wrap;max-width:760px}
+.cat{font-size:clamp(2.6rem,11vw,4.6rem);display:inline-block;transform-origin:50% 90%;user-select:none;filter:drop-shadow(0 6px 0 rgba(43,16,85,.25))}
+.gcat{width:clamp(84px,24vw,140px);height:auto;display:block;border:3px solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--ink);transform-origin:50% 90%;background:#fff}
+.a1{animation:d1 .8s ease-in-out infinite}
+.a2{animation:d2 .6s ease-in-out infinite}
+.a3{animation:d3 1s linear infinite}
+.a4{animation:d4 .7s ease-in-out infinite}
+@keyframes d1{0%,100%{transform:rotate(-14deg) translateY(0)}50%{transform:rotate(14deg) translateY(-22px)}}
+@keyframes d2{0%,100%{transform:scale(1,1) translateY(0)}25%{transform:scale(1.1,.88)}50%{transform:scale(.92,1.12) translateY(-26px)}75%{transform:scale(1.08,.9)}}
+@keyframes d3{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+@keyframes d4{0%,100%{transform:translateX(-10px) rotate(-8deg)}50%{transform:translateX(10px) rotate(8deg) translateY(-12px)}}
+
+.kit{width:clamp(54px,15vw,84px);height:clamp(54px,15vw,84px);display:inline-block;transform-origin:50% 90%;filter:drop-shadow(0 6px 0 rgba(43,16,85,.25))}
+.kit svg{width:100%;height:100%;overflow:visible}
+.poll{display:flex;flex-direction:column;align-items:center;gap:18px;background:#fff;border:3px solid var(--ink);border-radius:22px;padding:24px 22px;box-shadow:6px 6px 0 var(--ink);max-width:520px;width:100%;transform:rotate(1deg)}
+.poll h2{font-size:clamp(1.1rem,4vw,1.4rem);font-weight:900;line-height:1.3}
+.row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.yes{background:var(--sun)}
+.yay{background:var(--pink);color:#fff;-webkit-text-stroke:0;text-shadow:2px 2px 0 var(--ink);animation:wob 1.2s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg) scale(1.04)}}
+.reply{min-height:1.6em;font-weight:900;font-size:1.1rem}
+button{font:inherit;font-weight:900;font-size:1.15rem;color:var(--ink);background:var(--mint);border:3px solid var(--ink);border-radius:16px;padding:14px 26px;box-shadow:5px 5px 0 var(--ink);cursor:pointer;transition:transform .12s,box-shadow .12s}
+button:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+button:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--ink)}
+button:focus-visible{outline:4px solid var(--ink);outline-offset:4px}
+
+.term{width:100%;max-width:520px;min-height:92px;text-align:left;background:var(--ink);color:var(--mint);border-radius:14px;padding:14px 18px;font:700 1rem/1.5 ui-monospace,Menlo,Consolas,monospace;box-shadow:5px 5px 0 rgba(43,16,85,.35)}
+.term b{color:var(--sun)}
+
+.float{position:fixed;top:-60px;z-index:1;pointer-events:none;font-weight:900;opacity:.9;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(115vh) rotate(360deg)}}
+.pop{position:fixed;z-index:3;pointer-events:none;font-size:2.6rem;transform:translate(-50%,-50%);animation:pop 1s ease-out forwards}
+@keyframes pop{0%{transform:translate(-50%,-50%) scale(.2) rotate(0)}30%{transform:translate(-50%,-90%) scale(1.3) rotate(-15deg)}100%{transform:translate(-50%,-260%) scale(.8) rotate(25deg);opacity:0}}
+
+@media (prefers-reduced-motion:reduce){
+  body,h1 span,.cat,.kit,.gcat,.yay{animation:none!important}
+  .float{display:none}
+}
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">All the best!</h1>
+  <p class="sub" id="sub">May the straps of luck be with you 🏋️</p>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="kit" viewBox="0 0 100 100">
+      <polygon points="16,42 20,8 44,28" fill="var(--c)" stroke="#2b1055" stroke-width="3.5" stroke-linejoin="round"/>
+      <polygon points="84,42 80,8 56,28" fill="var(--c)" stroke="#2b1055" stroke-width="3.5" stroke-linejoin="round"/>
+      <polygon points="23,34 25,19 36,28" fill="#ff9ecb"/><polygon points="77,34 75,19 64,28" fill="#ff9ecb"/>
+      <ellipse cx="50" cy="93" rx="21" ry="11" fill="var(--c)" stroke="#2b1055" stroke-width="3.5"/>
+      <circle cx="34" cy="96" r="6.5" fill="#fff" stroke="#2b1055" stroke-width="3"/><circle cx="66" cy="96" r="6.5" fill="#fff" stroke="#2b1055" stroke-width="3"/>
+      <ellipse cx="50" cy="58" rx="38" ry="32" fill="var(--c)" stroke="#2b1055" stroke-width="3.5"/>
+      <ellipse cx="36" cy="56" rx="5" ry="6.5" fill="#2b1055"/><ellipse cx="64" cy="56" rx="5" ry="6.5" fill="#2b1055"/>
+      <circle cx="38" cy="53.5" r="2.2" fill="#fff"/><circle cx="66" cy="53.5" r="2.2" fill="#fff"/>
+      <circle cx="24" cy="68" r="6" fill="#ff7eb6" opacity=".6"/><circle cx="76" cy="68" r="6" fill="#ff7eb6" opacity=".6"/>
+      <path d="M45 66 L55 66 L50 72 Z" fill="#ff4fa3" stroke="#2b1055" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M50 72 Q45 79 40 74 M50 72 Q55 79 60 74" stroke="#2b1055" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M8 60 L22 63 M8 70 L22 69 M92 60 L78 63 M92 70 L78 69" stroke="#2b1055" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+  <div class="stage" aria-hidden="true">
+    <span class="kit a1" style="--c:#ffb347;animation-delay:0s"><svg viewBox="0 0 100 100"><use href="#kit"/></svg></span>
+    <span class="cat a2" style="animation-delay:-.1s">🐶</span>
+    <img class="gcat a4" src="cat.gif" alt="">
+    <span class="cat a1" style="animation-delay:-.2s">🐩</span>
+    <span class="kit a2" style="--c:#d9dde3;animation-delay:-0.25s"><svg viewBox="0 0 100 100"><use href="#kit"/></svg></span>
+    <span class="cat a4" style="animation-delay:-.3s">🐰</span>
+  </div>
+
+  <div class="term" id="term" aria-live="polite">$ ready when you are<span id="cur">_</span></div>
+  <button id="go">Compile my confidence</button>
+
+  <section class="poll">
+    <h2>Do you like the efforts of the guy who sent you this?</h2>
+    <div class="row">
+      <button class="yes" id="yes">Yes</button>
+      <button class="yay" id="yay">YAYAYAyess</button>
+    </div>
+    <p class="reply" id="reply" aria-live="polite"></p>
+  </section>
+</main>
+
+<script>
+(function(){
+  // Put her name here, or share the link as yoursite.vercel.app/?name=Her
+  var NAME = "";
+  try{ var q=new URLSearchParams(location.search).get("name"); if(q) NAME=q.slice(0,30); }catch(e){}
+
+  var h1=document.getElementById("title");
+  var text = NAME ? "All the best, "+NAME+"!" : "All the best!";
+  h1.textContent="";
+  text.split(" ").forEach(function(w,i){
+    var s=document.createElement("span"); s.textContent=w; s.style.animationDelay=(i*0.15)+"s";
+    h1.appendChild(s); h1.appendChild(document.createTextNode(" "));
+  });
+
+  var lines=[
+    "<b>Time complexity of you crushing this:</b> O(1)",
+    "<b>Bug found:</b> none. You’re the whole solution.",
+    "<b>Stack overflow?</b> Not on your watch.",
+    "<b>Binary search result:</b> found your A+ at index 0",
+    "<b>Edge cases:</b> handled. Confidence: null-safe.",
+    "<b>Linked list check:</b> you’re always connected to success.",
+    "<b>Recursion:</b> see “you’ve got this”. Repeat.",
+    "<b>git commit -m</b> “crushed the DSA exam”",
+    "<b>Status:</b> 200 OK. Go get it. 🐾"
+  ];
+  var i=0, term=document.getElementById("term");
+
+  var pieces=["⭐","✨","💛","🌸","🧸","🐾","🐶","O(1)","{ }","[ ]"];
+  function rain(n){
+    for(var k=0;k<n;k++){
+      var e=document.createElement("div"); e.className="float";
+      e.textContent=pieces[Math.floor(Math.random()*pieces.length)];
+      e.style.left=Math.random()*100+"vw";
+      e.style.fontSize=(1.2+Math.random()*1.8)+"rem";
+      e.style.animationDuration=(6+Math.random()*7)+"s";
+      e.style.animationDelay=(Math.random()*2)+"s";
+      document.body.appendChild(e);
+      setTimeout(function(el){return function(){el.remove()}}(e),15000);
+    }
+  }
+  function pop(x,y){
+    var e=document.createElement("div"); e.className="pop";
+    e.textContent=["✨","🎉","💛","🌸","🐾","🐶","🧸"][Math.floor(Math.random()*7)];
+    e.style.left=x+"px"; e.style.top=y+"px";
+    document.body.appendChild(e);
+    setTimeout(function(){e.remove()},1000);
+  }
+
+  rain(7);
+  setInterval(function(){ if(document.visibilityState==="visible") rain(1); },3500);
+
+  document.addEventListener("pointerdown",function(ev){ pop(ev.clientX,ev.clientY); });
+
+  document.getElementById("go").addEventListener("click",function(ev){
+    ev.stopPropagation();
+    term.innerHTML="$ run confidence.exe<br>"+lines[i%lines.length];
+    i++;
+    rain(8);
+    var r=ev.currentTarget.getBoundingClientRect();
+    for(var k=0;k<6;k++) setTimeout(function(){pop(r.left+Math.random()*r.width, r.top)},k*80);
+  });
+  var reply=document.getElementById("reply");
+  document.getElementById("yes").addEventListener("click",function(ev){
+    ev.stopPropagation();
+    reply.textContent="Noted 😌 He’ll be happy to hear it.";
+    var r=ev.currentTarget.getBoundingClientRect();
+    for(var k=0;k<4;k++) setTimeout(function(){pop(r.left+Math.random()*r.width,r.top)},k*90);
+  });
+  document.getElementById("yay").addEventListener("click",function(ev){
+    ev.stopPropagation();
+    reply.textContent="He’s doing a happy dance right now 🕺🎉";
+    rain(24);
+    var r=ev.currentTarget.getBoundingClientRect();
+    for(var k=0;k<10;k++) setTimeout(function(){pop(r.left+Math.random()*r.width,r.top)},k*70);
+  });
+})();
+</script>
+</body>
+</html>
